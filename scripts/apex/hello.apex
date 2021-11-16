@@ -8,3 +8,5 @@
 string tempvar = 'Enter_your_name_here';
 System.debug('Hello World!');
 System.debug('My name is ' + tempvar);
+
+system.debug(sdgController.GetSDGInitialLoad('001r000000gJt2yAAC', 'CustomObject:TCP-SOS_Documents', null, null, 10));

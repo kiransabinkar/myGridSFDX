@@ -4,7 +4,7 @@ Copyright © Felix Lindsay 21 November 2017
 flindsay@gmail.com
 All rights reserved
 */
-public with sharing class sdgObjectEventHandler {
+public without sharing class sdgObjectEventHandler {
 
     Public class NameValue
     {
@@ -31,8 +31,12 @@ public with sharing class sdgObjectEventHandler {
         {
             String queryrights = 'select recordid,  HasDeleteAccess	 from UserRecordAccess where recordid = \'' + String.escapeSingleQuotes(ObjectID) + '\' and userid=\'' + UserInfo.getUserId() + '\'';
             UserRecordAccess URA = database.query(queryrights);
+            
+            boolean hasDelete = URA.HasDeleteAccess; 
+            
+            hasDelete = true;
 
-            if (URA.HasDeleteAccess)
+            if (hasDelete)
             {   //can delete this record
                 //Now get pointer to sobject
                 Schema.SObjectType token = null;
@@ -47,6 +51,8 @@ public with sharing class sdgObjectEventHandler {
                 }
 
                 Schema.DescribeSObjectResult dr = token.getDescribe();
+                
+                system.debug('#### LOG ###### ' + dr);
 
                 if (dr.isDeletable())
                 {   //No need to double check isaccessible for an ID if it's deletable

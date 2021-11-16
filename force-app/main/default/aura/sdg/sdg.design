@@ -14,8 +14,13 @@
 
     <design:attribute name="RelationshipName" label="RelationshipName" description="Relationship name to the child object (eg to show Opportunities on Account, set value to 'Opportunities')"
     />
+
     <design:attribute name="FieldSetName" label="FieldSetName" description="Name of field set of child objects" />
+
+    <design:attribute name="recordId" label="Record Id" description="Pass parent recordId while using in Flows to render related records"
+    />
 
     <design:attribute name="SDGTag" label="Legacy Tag (Deprecated)" description="Legacy configuration - please use dropdown 'Data Provider' from now on"
     />
+
 </design:component>

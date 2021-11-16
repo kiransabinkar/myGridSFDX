@@ -72,6 +72,11 @@
         <members>sdgTestOldDataProviders</members>
         <members>sdgVerification</members>
         <members>sdgVerificationTest</members>
+        <!--Flow Event Launcher-->
+        <members>FlowEventAuraController</members>
+        <members>FlowEventAuraControllerTest</members>
+        <!--Flow Event Launcher-->
+        
         <name>ApexClass</name>
     </types>
     <types>
@@ -97,10 +102,14 @@
         <members>sdgSVG</members>
         <members>sdgSortableColumn</members>
         <members>sdgSortableColumnSort</members>
+        <!--Flow Event Launcher-->
+        <members>FlowEvent</members>
+        <members>FlowEventListener</members>
         <name>AuraDefinitionBundle</name>
+        <!--Flow Event Launcher-->
     </types>
     <types>
-        <members>Sortable_Data_Grids_Lightning</members>
+        <members>Sortable_Data_Grids</members>
         <name>CustomApplication</name>
     </types>
     <types>

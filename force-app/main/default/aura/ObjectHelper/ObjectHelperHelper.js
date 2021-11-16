@@ -89,7 +89,7 @@
                 }
             }
             else if (actionResult.getState() === "ERROR") {
-                var errors = response.getError();
+                var errors = actionResult.getError();
                 if (errors) {
                     if (errors[0] && errors[0].message) {
                         var navToast = $A.get("e.force:showToast");

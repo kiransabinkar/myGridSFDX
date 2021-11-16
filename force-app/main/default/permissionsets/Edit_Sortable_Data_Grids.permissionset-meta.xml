@@ -5,7 +5,7 @@
         <visible>true</visible>
     </applicationVisibilities>
     <applicationVisibilities>
-        <application>Sortable_Data_Grids_Lightning</application>
+        <application>Sortable_Data_Grids</application>
         <visible>true</visible>
     </applicationVisibilities>
     <fieldPermissions>
